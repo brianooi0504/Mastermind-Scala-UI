@@ -1,0 +1,137 @@
+.background {
+    -fx-background-color: lightyellow;
+}
+
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: saddlebrown;
+}
+
+.label-header {
+    -fx-font-size: 32px;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: maroon;
+}
+
+.table-view {
+    -fx-base: saddlebrown;
+    -fx-background-color: saddlebrown;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 15;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 0 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 15pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: maroon;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent, derive(saddlebrown,20%);
+}
+
+.split-pane {
+    -fx-padding: 1 0 0 0;
+}
+
+.menu-bar {
+    -fx-background-color: derive(wheat,20%);
+    -fx-focus-color: maroon;
+}
+
+.context-menu {
+    -fx-background-color: derive(tan,50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: saddlebrown;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.button {
+    -fx-padding: 5 10 5 10;   
+    -fx-background-radius: 10;
+    -fx-background-color: saddlebrown;
+    -fx-font-family: "Segoe UI", Helvetica, Verdana, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: wheat;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: sienna;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: wheat;
+  -fx-text-fill: saddlebrown;
+}
+
+.button:default {
+    -fx-background-color: maroon;
+    -fx-text-fill: wheat;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(maroon,30%);
+}
+
+.dialog-pane > .button-bar > .container {
+    -fx-background-color:tan;
+}
+
+.dialog-pane > .content.label {
+    -fx-padding: 0.5em 0.5em 0.5em 0.5em;
+    -fx-background-color: tan;
+    -fx-font-size:15.0px;
+    -fx-text-fill: black
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: tan;
+}
+
+.dialog-pane:header .header-panel .label{
+    -fx-background-color: tan;
+    -fx-background-radius:10px;
+    -fx-font-size:15pt;
+    -fx-text-fill: maroon;
+    -fx-font-family: "Segoe UI", Helvetica, Verdana, sans-serif;
+    -fx-font-weight: bold;
+}

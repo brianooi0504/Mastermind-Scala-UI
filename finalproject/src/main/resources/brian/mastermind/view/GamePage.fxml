@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="brian.mastermind.view.GamePageController">
+   <children>
+      <SplitPane dividerPositions="0.4" layoutX="126.0" layoutY="48.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="368.0" prefWidth="240.0" styleClass="background" SplitPane.resizableWithParent="false">
+               <children>
+                  <HBox fx:id="guessedColors" layoutX="13.0" layoutY="132.0" spacing="5.0" AnchorPane.topAnchor="132.0">
+                     <children>
+                        <Circle fx:id="guessed1" fill="GREY" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="guessed2" fill="GREY" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="guessed3" fill="GREY" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="guessed4" fill="GREY" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="41.0" layoutY="233.0" spacing="20.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="233.0">
+                     <children>
+                        <Circle fx:id="choice1" fill="RED" onMouseClicked="#handleRed" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="choice2" fill="YELLOW" onMouseClicked="#handleYellow" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="choice3" fill="GREEN" onMouseClicked="#handleGreen" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="41.0" layoutY="283.0" spacing="20.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="283.0">
+                     <children>
+                        <Circle fx:id="choice4" fill="BLUE" onMouseClicked="#handleBlue" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="choice5" fill="MEDIUMPURPLE" onMouseClicked="#handlePurple" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="choice6" fill="WHITE" onMouseClicked="#handleWhite" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="62.0" layoutY="346.0" prefHeight="28.0" prefWidth="124.0" spacing="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="346.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleClear" text="Clear" />
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="16.0" layoutY="105.0" text="Your guesses:" AnchorPane.topAnchor="105.0" />
+                  <Label layoutX="16.0" layoutY="206.0" text="Choose your colors:" AnchorPane.topAnchor="206.0" />
+                  <Label layoutX="24.0" layoutY="24.0" styleClass="label-header" text="MASTERMIND" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="24.0">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="71.0" layoutY="78.0" spacing="5.0">
+                     <children>
+                        <Label text="Chance(s) left:" />
+                        <Label fx:id="chancesLabel" text="10" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <ScrollPane prefHeight="316.0" prefWidth="350.0" styleClass="background">
+               <content>
+                  <VBox fx:id="rightCol" prefHeight="293.0" prefWidth="360.0">
+                     <children>
+                        <HBox prefHeight="50.0" prefWidth="365.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="220.0" text="Guesses" textAlignment="JUSTIFY" />
+                              <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="55.0" text="Correct Position" textAlignment="CENTER" wrapText="true" />
+                              <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="55.0" text="Wrong Position" textAlignment="CENTER" wrapText="true" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
